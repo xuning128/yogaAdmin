@@ -1,0 +1,12 @@
+/Users/aimefu/Desktop/作品集/yogaAdmin/yogaAdminLib/bin/Debug/net6.0/yogaAdminLib.deps.json
+/Users/aimefu/Desktop/作品集/yogaAdmin/yogaAdminLib/bin/Debug/net6.0/yogaAdminLib.dll
+/Users/aimefu/Desktop/作品集/yogaAdmin/yogaAdminLib/bin/Debug/net6.0/yogaAdminLib.pdb
+/Users/aimefu/Desktop/作品集/yogaAdmin/yogaAdminLib/obj/Debug/net6.0/yogaAdminLib.csproj.AssemblyReference.cache
+/Users/aimefu/Desktop/作品集/yogaAdmin/yogaAdminLib/obj/Debug/net6.0/yogaAdminLib.GeneratedMSBuildEditorConfig.editorconfig
+/Users/aimefu/Desktop/作品集/yogaAdmin/yogaAdminLib/obj/Debug/net6.0/yogaAdminLib.AssemblyInfoInputs.cache
+/Users/aimefu/Desktop/作品集/yogaAdmin/yogaAdminLib/obj/Debug/net6.0/yogaAdminLib.AssemblyInfo.cs
+/Users/aimefu/Desktop/作品集/yogaAdmin/yogaAdminLib/obj/Debug/net6.0/yogaAdminLib.csproj.CoreCompileInputs.cache
+/Users/aimefu/Desktop/作品集/yogaAdmin/yogaAdminLib/obj/Debug/net6.0/yogaAdminLib.dll
+/Users/aimefu/Desktop/作品集/yogaAdmin/yogaAdminLib/obj/Debug/net6.0/refint/yogaAdminLib.dll
+/Users/aimefu/Desktop/作品集/yogaAdmin/yogaAdminLib/obj/Debug/net6.0/yogaAdminLib.pdb
+/Users/aimefu/Desktop/作品集/yogaAdmin/yogaAdminLib/obj/Debug/net6.0/ref/yogaAdminLib.dll
