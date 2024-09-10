@@ -11,11 +11,13 @@ public class Teacher
     [Key]
     public string id { get; set; }
     public string name { get; set; }
-    public string  eng_name { get; set; }
+    public string eng_name { get; set; }
 
-    public string mobile {get;set;}
+    public string mobile { get; set; }
 
-    public string isfulltime {get;set;}
+    public bool isfulltime { get; set; }
+
+    public string worktype { get; set; }
 
     public string createtime { get; set; }
     public string modifytime { get; set; }
