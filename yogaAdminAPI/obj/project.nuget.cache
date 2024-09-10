@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "UcPENhTOgRqnzWyQN3WjcPyrElDkb5eEIQ89FTnjcNQRYiznz5rFRyTXecfWahMMU3+457gf7jrlligovSGPRg==",
+  "success": true,
+  "projectFilePath": "/Users/aimefu/Desktop/作品集/yogaAdmin/yogaAdminAPI/yogaAdminAPI.csproj",
+  "expectedPackageFiles": [
+    "/Users/aimefu/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "/Users/aimefu/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/aimefu/.nuget/packages/swashbuckle.aspnetcore/6.5.0/swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "/Users/aimefu/.nuget/packages/swashbuckle.aspnetcore.swagger/6.5.0/swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "/Users/aimefu/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.5.0/swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "/Users/aimefu/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.5.0/swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
