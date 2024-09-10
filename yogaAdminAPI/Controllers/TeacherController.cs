@@ -104,4 +104,8 @@ public class TeacherController : ControllerBase
         }
 
     }
+
+
+    //todo update API
+    //todo delete API
 }

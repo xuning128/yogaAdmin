@@ -32,11 +32,6 @@ public class TeacherItem
     public string Mobile { get; set; }
 
     /// <summary>
-    /// 生日
-    /// </summary>
-    public string Birthday { get; set; }
-
-    /// <summary>
     /// 是否為全職
     /// </summary>
     public string IsFullTime { get; set; }

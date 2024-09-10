@@ -10,7 +10,11 @@ public class TeacherProfile : Profile
 {
     public TeacherProfile()
     {
-        CreateMap<Teacher, TeacherItem>();
+        CreateMap<Teacher, TeacherItem>()
+        .ForMember(m => m.TeacherCName, o => o.MapFrom(d=>d.name))
+        .ForMember(m => m.TeacherEName, o => o.MapFrom(d=>d.eng_name))
+        .ForMember(m => m.WorkTypeDesc, o => o.MapFrom(d => d.worktype) )
+        ;
 
 
         // CreateMap<TeacherItem, TrxOrderBox>()

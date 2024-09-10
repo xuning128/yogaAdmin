@@ -162,6 +162,7 @@ public class TeacherService : ITeacherService
                     item.worktype = values[3]; //工作性質
                     item.isfulltime = item.worktype == "全職" ? true : false;
                     item.createtime = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
+                    item.modifytime = ""; 
 
                     teachers.Add(item);
 
