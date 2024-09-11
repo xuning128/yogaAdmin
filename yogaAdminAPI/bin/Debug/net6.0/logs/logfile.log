@@ -38,3 +38,54 @@ FROM teacher AS t
 2024-09-11 14:36:13.4471|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action yogaAdminAPI.Controllers.TeacherController.Query (yogaAdminAPI) in 789.3406ms
 2024-09-11 14:36:13.4475|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'yogaAdminAPI.Controllers.TeacherController.Query (yogaAdminAPI)'
 2024-09-11 14:36:13.4541|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7141/Teacher/Query application/json 24 - 200 - application/json;+charset=utf-8 837.6109ms
+2024-09-11 16:59:22.6280|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7141
+2024-09-11 16:59:22.6479|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5113
+2024-09-11 16:59:22.6503|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-09-11 16:59:22.6513|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-09-11 16:59:22.6513|INFO|Microsoft.Hosting.Lifetime|Content root path: /Users/aimefu/Desktop/作品集/yogaAdmin/yogaAdminAPI/
+2024-09-11 16:59:23.2535|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7141/ - -
+2024-09-11 16:59:23.5244|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7141/ - - - 404 0 - 278.1022ms
+2024-09-11 16:59:26.5282|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7141/swagger - -
+2024-09-11 16:59:26.5385|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7141/swagger - - - 301 0 - 10.3562ms
+2024-09-11 16:59:26.5401|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7141/swagger/index.html - -
+2024-09-11 16:59:26.5719|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7141/swagger/index.html - - - 200 - text/html;charset=utf-8 31.7493ms
+2024-09-11 16:59:26.5811|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7141/swagger/swagger-ui.css - -
+2024-09-11 16:59:26.5920|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-09-11 16:59:26.5921|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7141/swagger/swagger-ui.css - - - 200 144929 text/css 10.9689ms
+2024-09-11 16:59:26.5921|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7141/swagger/swagger-ui-bundle.js - -
+2024-09-11 16:59:26.7284|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7141/swagger/swagger-ui-standalone-preset.js - -
+2024-09-11 16:59:26.8072|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-09-11 16:59:26.8072|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-09-11 16:59:26.8101|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7141/swagger/swagger-ui-bundle.js - - - 200 1061536 application/javascript 217.6722ms
+2024-09-11 16:59:26.8101|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7141/swagger/swagger-ui-standalone-preset.js - - - 200 312163 application/javascript 81.6348ms
+2024-09-11 16:59:26.8502|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7141/swagger/v1/swagger.json - -
+2024-09-11 16:59:26.9092|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7141/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 59.0028ms
+2024-09-11 16:59:33.5223|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7141/Teacher/Query application/json 24
+2024-09-11 16:59:33.5289|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'yogaAdminAPI.Controllers.TeacherController.Query (yogaAdminAPI)'
+2024-09-11 16:59:33.5624|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Query", controller = "Teacher"}. Executing controller action with signature System.Threading.Tasks.Task`1[yogaAdminLib.DTOs.QueryRs] Query(yogaAdminLib.DTOs.QueryRq) on controller yogaAdminAPI.Controllers.TeacherController (yogaAdminAPI).
+2024-09-11 16:59:37.8738|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (36ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT t.id, t.createtime, t.eng_name, t.isfulltime, t.mobile, t.modifytime, t.name, t.worktype
+FROM teacher AS t
+2024-09-11 16:59:37.9313|INFO|yogaAdminAPI.Services.TeacherService|okok
+2024-09-11 16:59:37.9345|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'yogaAdminLib.DTOs.QueryRs'.
+2024-09-11 16:59:37.9384|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action yogaAdminAPI.Controllers.TeacherController.Query (yogaAdminAPI) in 4374.4042ms
+2024-09-11 16:59:37.9384|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'yogaAdminAPI.Controllers.TeacherController.Query (yogaAdminAPI)'
+2024-09-11 16:59:37.9461|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7141/Teacher/Query application/json 24 - 200 - application/json;+charset=utf-8 4423.8519ms
+2024-09-11 17:02:22.3099|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7141
+2024-09-11 17:02:22.3277|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5113
+2024-09-11 17:02:22.3299|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-09-11 17:02:22.3310|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-09-11 17:02:22.3310|INFO|Microsoft.Hosting.Lifetime|Content root path: /Users/aimefu/Desktop/作品集/yogaAdmin/yogaAdminAPI/
+2024-09-11 17:02:22.7575|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7141/ - -
+2024-09-11 17:02:23.0749|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7141/ - - - 404 0 - 320.9755ms
+2024-09-11 17:02:34.7251|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7141/Teacher/Query application/json;+charset=utf-8 -
+2024-09-11 17:02:34.7270|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'yogaAdminAPI.Controllers.TeacherController.Query (yogaAdminAPI)'
+2024-09-11 17:02:34.7411|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Query", controller = "Teacher"}. Executing controller action with signature System.Threading.Tasks.Task`1[yogaAdminLib.DTOs.QueryRs] Query(yogaAdminLib.DTOs.QueryRq) on controller yogaAdminAPI.Controllers.TeacherController (yogaAdminAPI).
+2024-09-11 17:02:37.3471|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (34ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT t.id, t.createtime, t.eng_name, t.isfulltime, t.mobile, t.modifytime, t.name, t.worktype
+FROM teacher AS t
+2024-09-11 17:02:37.4024|INFO|yogaAdminAPI.Services.TeacherService|okok
+2024-09-11 17:02:37.4067|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'yogaAdminLib.DTOs.QueryRs'.
+2024-09-11 17:02:37.4116|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action yogaAdminAPI.Controllers.TeacherController.Query (yogaAdminAPI) in 2669.0713ms
+2024-09-11 17:02:37.4116|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'yogaAdminAPI.Controllers.TeacherController.Query (yogaAdminAPI)'
+2024-09-11 17:02:37.4201|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7141/Teacher/Query application/json;+charset=utf-8 - - 200 - application/json;+charset=utf-8 2695.0210ms
