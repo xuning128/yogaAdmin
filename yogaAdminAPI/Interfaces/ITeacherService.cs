@@ -19,5 +19,12 @@ public interface ITeacherService
     /// <param name="file"></param>
     /// <returns></returns>
      Task<AddRs> Add(IFormFile file);
+
+    /// <summary>
+    /// 修改及刪除 老師基本資料
+    /// </summary>
+    /// <param name="rq"></param>
+    /// <returns></returns>
+     Task<EditRs> Edit(EditRq rq);
 }
 

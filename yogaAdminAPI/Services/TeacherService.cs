@@ -35,6 +35,13 @@ public class TeacherService : ITeacherService
 
     }
 
+    #region 查詢老師基本資料
+
+    /// <summary>
+    /// 查詢老師基本資料
+    /// </summary>
+    /// <param name="Rq"></param>
+    /// <returns></returns>
     public async Task<QueryRs> GetQuery(QueryRq Rq)
     {
         QueryRs resp = new QueryRs();
@@ -74,6 +81,10 @@ public class TeacherService : ITeacherService
         return resp;
     }
 
+    #endregion 查詢老師基本資料
+
+
+    #region 新增老師基本資料  
 
     /// <summary>
     /// 透過csv新增瑜珈老師的基本資料
@@ -129,6 +140,81 @@ public class TeacherService : ITeacherService
 
     }
 
+    #endregion 新增老師基本資料 
+
+
+    #region 修改/刪除老師基本資料
+
+    /// <summary>
+    /// 修改及刪除 老師基本資料
+    /// </summary>
+    /// <param name="Rq"></param>
+    /// <returns></returns>
+    public async Task<EditRs> Edit(EditRq Rq)
+    {
+        EditRs rsObj = new EditRs();
+        rsObj.TeacherLt = new List<TeacherItem>();
+
+        try
+        {
+            Teacher req = await _yogaAdminDataContext.Teachers.Where(x=>x.id == Rq.TeacherId).FirstAsync();
+            
+            if (Rq.Action == "E")
+            {
+                //修改
+
+                req.name = string.IsNullOrEmpty(Rq.TeacherCName)? req.name : Rq.TeacherCName;
+                req.eng_name = string.IsNullOrEmpty(Rq.TeacherEName)? req.eng_name : Rq.TeacherEName;
+                req.mobile = string.IsNullOrEmpty(Rq.Mobile)? req.mobile : Rq.Mobile;
+                req.isfulltime = Rq.IsFullTime == null? req.isfulltime : bool.Parse(Rq.IsFullTime.ToString());
+                req.worktype = string.IsNullOrEmpty(Rq.WorkTypeDesc)? req.worktype : Rq.WorkTypeDesc;
+                req.modifytime = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
+
+                _yogaAdminDataContext.Update(req);
+
+                
+
+                
+            }
+            else if (Rq.Action == "D")
+            {
+                //刪除
+                _yogaAdminDataContext.Remove(req);
+                
+            }
+
+            await _yogaAdminDataContext.SaveChangesAsync();
+
+
+            
+            
+            TeacherItem teacher = _mapper.Map<Teacher, TeacherItem >(req);
+            rsObj.TeacherLt.Add(teacher);
+            rsObj.Action = Rq.Action;
+            
+            if(Rq.Action == "E")
+                rsObj.ActionDesc = "編輯";
+            else if(Rq.Action == "D")
+                rsObj.ActionDesc = "刪除";
+
+        }
+        catch (Exception ex)
+        {
+            string errMsg = ex.Message;
+
+            //todo add nlog
+
+        }
+
+        return rsObj;
+    }
+
+
+    #endregion 修改老師基本資料
+
+
+    #region  Methods
+
 
     /// <summary>
     /// 檔案讀取
@@ -146,7 +232,7 @@ public class TeacherService : ITeacherService
             {
                 //var content = await reader.ReadToEndAsync();
 
-                
+
 
                 while (!reader.EndOfStream)
                 {
@@ -162,9 +248,13 @@ public class TeacherService : ITeacherService
                     item.worktype = values[3]; //工作性質
                     item.isfulltime = item.worktype == "全職" ? true : false;
                     item.createtime = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
-                    item.modifytime = ""; 
+                    item.modifytime = "";
 
-                    teachers.Add(item);
+
+                    if (!await IsTeacherExist(item.mobile))
+                        teachers.Add(item);
+
+
 
                 }
 
@@ -180,5 +270,43 @@ public class TeacherService : ITeacherService
 
         return teachers;
     }
+
+
+
+
+
+
+
+    /// <summary>
+    /// 確認該筆老師是否已在資料庫
+    /// </summary>
+    /// <param name="mobile"></param>
+    /// <returns></returns>
+    private async Task<bool> IsTeacherExist(string mobile)
+    {
+        bool isExsit = false;
+
+        try
+        {
+            var req = await _yogaAdminDataContext.Teachers.Where(x => x.mobile == mobile).FirstOrDefaultAsync();
+
+            if (req != null)
+                isExsit = true;
+
+        }
+        catch (Exception ex)
+        {
+            string errMsg = ex.Message;
+
+            //todo add nlog
+
+        }
+
+
+        return isExsit;
+
+    }
+
+    #endregion Methods
 
 }

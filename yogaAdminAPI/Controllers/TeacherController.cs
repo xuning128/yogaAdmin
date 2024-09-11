@@ -60,7 +60,8 @@ public class TeacherController : ControllerBase
     }
 
     /// <summary>
-    /// 新增瑜珈老師清單
+    /// 新增瑜珈老師基本資料<br/>
+    /// （檔案限制CSV檔）
     /// </summary>
     /// <param name="Rq"></param>
     /// <returns></returns>
@@ -106,6 +107,75 @@ public class TeacherController : ControllerBase
     }
 
 
-    //todo update API
-    //todo delete API
+    /// <summary>
+    /// 修改瑜珈老師清單
+    /// </summary>
+    /// <param name="Rq"></param>
+    /// <returns></returns>
+    [HttpPost("Edit")]
+    public async Task<EditRs> Edit(EditRq rq)
+    {
+
+        try
+        {
+            EditRs rsObj = new EditRs();
+
+
+            if (!ModelState.IsValid)
+            {
+                ModelState.AddModelError("TeacherId", "資料驗證錯誤");
+                return rsObj;
+
+            }
+
+           rsObj = await _ITeacherService.Edit(rq);
+
+            return rsObj;
+
+        }
+        catch (Exception ex)
+        {
+            string errMsg = ex.Message;
+            //TODO add nlog 
+            throw;
+        }
+
+    }
+
+
+    /// <summary>
+    /// 刪除瑜珈老師基本資料
+    /// </summary>
+    /// <param name="Rq"></param>
+    /// <returns></returns>
+    [HttpPost("Delete")]
+    public async Task<EditRs> Delete(EditRq rq)
+    {
+
+        try
+        {
+            EditRs rsObj = new EditRs();
+
+
+            if (!ModelState.IsValid)
+            {
+                ModelState.AddModelError("TeacherId", "資料驗證錯誤");
+                return rsObj;
+
+            }
+
+           rsObj = await _ITeacherService.Edit(rq);
+
+            return rsObj;
+
+        }
+        catch (Exception ex)
+        {
+            string errMsg = ex.Message;
+            //TODO add nlog 
+            throw;
+        }
+
+    }
+
 }
