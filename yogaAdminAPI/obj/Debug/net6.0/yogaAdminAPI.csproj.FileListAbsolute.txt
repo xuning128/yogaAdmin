@@ -84,3 +84,7 @@
 /Users/aimefu/Desktop/作品集/yogaAdmin/yogaAdminAPI/obj/Debug/net6.0/yogaAdminAPI.pdb
 /Users/aimefu/Desktop/作品集/yogaAdmin/yogaAdminAPI/obj/Debug/net6.0/yogaAdminAPI.genruntimeconfig.cache
 /Users/aimefu/Desktop/作品集/yogaAdmin/yogaAdminAPI/obj/Debug/net6.0/ref/yogaAdminAPI.dll
+/Users/aimefu/Desktop/作品集/yogaAdmin/yogaAdminAPI/bin/Debug/net6.0/NLog.dll
+/Users/aimefu/Desktop/作品集/yogaAdmin/yogaAdminAPI/bin/Debug/net6.0/NLog.Extensions.Logging.dll
+/Users/aimefu/Desktop/作品集/yogaAdmin/yogaAdminAPI/bin/Debug/net6.0/NLog.Web.AspNetCore.dll
+/Users/aimefu/Desktop/作品集/yogaAdmin/yogaAdminAPI/bin/Debug/net6.0/nlog.config

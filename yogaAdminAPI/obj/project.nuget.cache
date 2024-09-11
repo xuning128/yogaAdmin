@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "VWkQ46/4cAavfmyThIcBVpnGUUVb1eqzErGoAjw5cgLQoiDmTEbQCLDDsDsxI/pknpEkqtvwXVFTR01AE3gajg==",
+  "dgSpecHash": "c2RA0upv7TCVceJLGgfYcgrt2r8LB9HQNL7QCVu+9n8TIi+zUkKQZfT5SO8PjPo3A2RXuBR1HSlC4a6gPu/qhw==",
   "success": true,
   "projectFilePath": "/Users/aimefu/Desktop/作品集/yogaAdmin/yogaAdminAPI/yogaAdminAPI.csproj",
   "expectedPackageFiles": [
@@ -47,6 +47,9 @@
     "/Users/aimefu/.nuget/packages/microsoft.sqlserver.server/1.0.0/microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "/Users/aimefu/.nuget/packages/microsoft.win32.registry/5.0.0/microsoft.win32.registry.5.0.0.nupkg.sha512",
     "/Users/aimefu/.nuget/packages/microsoft.win32.systemevents/5.0.0/microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "/Users/aimefu/.nuget/packages/nlog/5.2.0/nlog.5.2.0.nupkg.sha512",
+    "/Users/aimefu/.nuget/packages/nlog.extensions.logging/5.3.0/nlog.extensions.logging.5.3.0.nupkg.sha512",
+    "/Users/aimefu/.nuget/packages/nlog.web.aspnetcore/5.3.0/nlog.web.aspnetcore.5.3.0.nupkg.sha512",
     "/Users/aimefu/.nuget/packages/npgsql/7.0.6/npgsql.7.0.6.nupkg.sha512",
     "/Users/aimefu/.nuget/packages/npgsql.entityframeworkcore.postgresql/7.0.11/npgsql.entityframeworkcore.postgresql.7.0.11.nupkg.sha512",
     "/Users/aimefu/.nuget/packages/runtime.native.system.data.sqlclient.sni/4.7.0/runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",

@@ -71,12 +71,15 @@ public class TeacherService : ITeacherService
         }
         catch (Exception ex)
         {
-            //todo add nlog 
 
             string errMsg = ex.Message;
 
+            _logger.LogInformation($"GetQuery 有誤：{errMsg}");
+
             throw;
         }
+
+        _logger.LogInformation("okok");
 
         return resp;
     }
@@ -128,7 +131,7 @@ public class TeacherService : ITeacherService
         {
 
             string errMsg = ex.Message;
-            //todo add nlog
+             _logger.LogInformation($"新增教練基本資料有誤：{errMsg}");
 
             resp.StateCode = "555";
             resp.StateCodeDesc = "新增資料有誤";
@@ -154,6 +157,11 @@ public class TeacherService : ITeacherService
     {
         EditRs rsObj = new EditRs();
         rsObj.TeacherLt = new List<TeacherItem>();
+
+        if(Rq.Action == "E")
+                rsObj.ActionDesc = "編輯";
+            else if(Rq.Action == "D")
+                rsObj.ActionDesc = "刪除";
 
         try
         {
@@ -192,17 +200,14 @@ public class TeacherService : ITeacherService
             rsObj.TeacherLt.Add(teacher);
             rsObj.Action = Rq.Action;
             
-            if(Rq.Action == "E")
-                rsObj.ActionDesc = "編輯";
-            else if(Rq.Action == "D")
-                rsObj.ActionDesc = "刪除";
+            
 
         }
         catch (Exception ex)
         {
             string errMsg = ex.Message;
 
-            //todo add nlog
+           _logger.LogInformation($"{ rsObj.ActionDesc }教練基本資料有誤：{errMsg}");
 
         }
 

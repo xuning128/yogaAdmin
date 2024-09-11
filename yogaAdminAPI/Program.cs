@@ -1,5 +1,3 @@
-using System.Data;
-using System.Data.SqlClient;
 using yogaAdminLib.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
@@ -8,12 +6,18 @@ using yogaAdminAPI.Interfaces;
 using yogaAdminAPI.Services;
 using System.Reflection;
 using yogaAdminAPI.Profiles;
+using NLog.Web;
 
 
 IConfiguration configuration = new ConfigurationBuilder()
                             .AddJsonFile("appsettings.json")
                             .Build();
 var builder = WebApplication.CreateBuilder(args);
+
+
+builder.Logging.ClearProviders();
+builder.Logging.SetMinimumLevel(LogLevel.Trace);
+builder.Host.UseNLog();
 
 var Services = builder.Services;
 
@@ -42,10 +46,14 @@ builder.Services.AddControllers()
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(c => {
-      c.SwaggerDoc("v1", new OpenApiInfo { Title = "yogaAdmin API", Version = "v1.0.0" });
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "yogaAdmin API", Version = "v1.0.0" });
 
 });
+
+//nlog
+
 
 var app = builder.Build();
 
@@ -53,12 +61,12 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-     app.UseSwaggerUI(c =>
-    {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "yogaAdmin v1");
-        c.DefaultModelsExpandDepth(-1);
-        c.DocExpansion(DocExpansion.None);
-    });
+    app.UseSwaggerUI(c =>
+   {
+       c.SwaggerEndpoint("/swagger/v1/swagger.json", "yogaAdmin v1");
+       c.DefaultModelsExpandDepth(-1);
+       c.DocExpansion(DocExpansion.None);
+   });
 }
 
 app.UseHttpsRedirection();

@@ -53,7 +53,7 @@ public class TeacherController : ControllerBase
         catch (Exception ex)
         {
             string errMsg = ex.Message;
-            //TODO add nlog 
+            _logger.LogInformation($"Query API : {errMsg}");
             throw;
         }
 
@@ -68,10 +68,11 @@ public class TeacherController : ControllerBase
     [HttpPost("Add")]
     public async Task<AddRs> Add(IFormFile file)
     {
+        AddRs rsObj = new AddRs();
 
         try
         {
-            AddRs rsObj = new AddRs();
+
 
 
             if (file == null || file.Length == 0)
@@ -94,15 +95,17 @@ public class TeacherController : ControllerBase
             rsObj = await _ITeacherService.Add(file);
 
 
-            return rsObj;
+
 
         }
         catch (Exception ex)
         {
             string errMsg = ex.Message;
-            //TODO add nlog 
-            throw;
+            _logger.LogInformation($"Add API : {errMsg}");
+
         }
+
+        return rsObj;
 
     }
 
@@ -116,9 +119,11 @@ public class TeacherController : ControllerBase
     public async Task<EditRs> Edit(EditRq rq)
     {
 
+        EditRs rsObj = new EditRs();
+
         try
         {
-            EditRs rsObj = new EditRs();
+
 
 
             if (!ModelState.IsValid)
@@ -128,17 +133,19 @@ public class TeacherController : ControllerBase
 
             }
 
-           rsObj = await _ITeacherService.Edit(rq);
+            rsObj = await _ITeacherService.Edit(rq);
 
-            return rsObj;
+
 
         }
         catch (Exception ex)
         {
             string errMsg = ex.Message;
-            //TODO add nlog 
-            throw;
+            _logger.LogInformation($"Edit API : {errMsg}");
+
         }
+
+        return rsObj;
 
     }
 
@@ -151,10 +158,11 @@ public class TeacherController : ControllerBase
     [HttpPost("Delete")]
     public async Task<EditRs> Delete(EditRq rq)
     {
-
+        EditRs rsObj = new EditRs();
+        
         try
         {
-            EditRs rsObj = new EditRs();
+
 
 
             if (!ModelState.IsValid)
@@ -164,18 +172,18 @@ public class TeacherController : ControllerBase
 
             }
 
-           rsObj = await _ITeacherService.Edit(rq);
+            rsObj = await _ITeacherService.Edit(rq);
 
-            return rsObj;
+
 
         }
         catch (Exception ex)
         {
             string errMsg = ex.Message;
-            //TODO add nlog 
-            throw;
-        }
+            _logger.LogInformation($"Delete API : {errMsg}");
 
+        }
+        return rsObj;
     }
 
 }
