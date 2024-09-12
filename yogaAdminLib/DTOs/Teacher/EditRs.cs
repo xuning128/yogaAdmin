@@ -8,10 +8,12 @@ namespace yogaAdminLib.DTOs;
 /// <summary>
 /// 瑜珈老師查詢 Request 
 /// </summary>
-public class EditRs 
+public class EditRs
 {
     public string Action { get; set; }
     public string ActionDesc { get; set; }
+    public string StateCode { get; set; }
+    public string StateCodeDesc { get; set; }
     public List<TeacherItem> TeacherLt { get; set; }
 
 }

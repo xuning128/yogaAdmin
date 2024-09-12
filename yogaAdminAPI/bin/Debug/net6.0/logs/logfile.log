@@ -89,3 +89,138 @@ FROM teacher AS t
 2024-09-11 17:02:37.4116|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action yogaAdminAPI.Controllers.TeacherController.Query (yogaAdminAPI) in 2669.0713ms
 2024-09-11 17:02:37.4116|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'yogaAdminAPI.Controllers.TeacherController.Query (yogaAdminAPI)'
 2024-09-11 17:02:37.4201|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7141/Teacher/Query application/json;+charset=utf-8 - - 200 - application/json;+charset=utf-8 2695.0210ms
+2024-09-12 10:15:39.7680|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7141
+2024-09-12 10:15:39.7859|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5113
+2024-09-12 10:15:39.7877|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-09-12 10:15:39.7886|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-09-12 10:15:39.7886|INFO|Microsoft.Hosting.Lifetime|Content root path: /Users/aimefu/Desktop/作品集/yogaAdmin/yogaAdminAPI/
+2024-09-12 10:15:40.1351|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7141/ - -
+2024-09-12 10:15:40.3509|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7141/ - - - 404 0 - 216.7266ms
+2024-09-12 10:15:42.1256|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7141/swagger - -
+2024-09-12 10:15:42.1321|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7141/swagger - - - 301 0 - 6.5388ms
+2024-09-12 10:15:42.1338|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7141/swagger/index.html - -
+2024-09-12 10:15:42.1688|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7141/swagger/index.html - - - 200 - text/html;charset=utf-8 35.0318ms
+2024-09-12 10:15:42.1728|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7141/swagger/swagger-ui.css - -
+2024-09-12 10:15:42.1798|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-09-12 10:15:42.1798|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7141/swagger/swagger-ui.css - - - 200 144929 text/css 7.0865ms
+2024-09-12 10:15:42.1798|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7141/swagger/swagger-ui-bundle.js - -
+2024-09-12 10:15:42.1841|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-09-12 10:15:42.1842|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7141/swagger/swagger-ui-bundle.js - - - 200 1061536 application/javascript 4.2732ms
+2024-09-12 10:15:42.2080|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7141/swagger/swagger-ui-standalone-preset.js - -
+2024-09-12 10:15:42.3125|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-09-12 10:15:42.3125|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7141/swagger/swagger-ui-standalone-preset.js - - - 200 312163 application/javascript 104.6507ms
+2024-09-12 10:15:42.3617|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7141/swagger/v1/swagger.json - -
+2024-09-12 10:15:42.4125|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7141/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 50.7661ms
+2024-09-12 10:27:33.5815|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7141
+2024-09-12 10:27:33.6002|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5113
+2024-09-12 10:27:33.6024|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-09-12 10:27:33.6035|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-09-12 10:27:33.6035|INFO|Microsoft.Hosting.Lifetime|Content root path: /Users/aimefu/Desktop/作品集/yogaAdmin/yogaAdminAPI/
+2024-09-12 10:27:33.9274|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7141/ - -
+2024-09-12 10:27:34.1506|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7141/ - - - 404 0 - 224.3730ms
+2024-09-12 10:27:42.2831|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7141/Teacher/Query application/json;+charset=utf-8 -
+2024-09-12 10:27:42.2851|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'yogaAdminAPI.Controllers.TeacherController.Query (yogaAdminAPI)'
+2024-09-12 10:27:42.2991|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Query", controller = "Teacher"}. Executing controller action with signature System.Threading.Tasks.Task`1[yogaAdminLib.DTOs.QueryRs] Query(yogaAdminLib.DTOs.QueryRq) on controller yogaAdminAPI.Controllers.TeacherController (yogaAdminAPI).
+2024-09-12 10:27:46.9246|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (33ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT t.id, t.createtime, t.eng_name, t.isfulltime, t.mobile, t.modifytime, t.name, t.worktype
+FROM teacher AS t
+2024-09-12 10:27:46.9796|INFO|yogaAdminAPI.Services.TeacherService|okok
+2024-09-12 10:27:46.9838|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'yogaAdminLib.DTOs.QueryRs'.
+2024-09-12 10:27:46.9889|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action yogaAdminAPI.Controllers.TeacherController.Query (yogaAdminAPI) in 4688.4174ms
+2024-09-12 10:27:46.9893|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'yogaAdminAPI.Controllers.TeacherController.Query (yogaAdminAPI)'
+2024-09-12 10:27:46.9976|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7141/Teacher/Query application/json;+charset=utf-8 - - 200 - application/json;+charset=utf-8 4714.5295ms
+2024-09-12 10:29:37.6708|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7141
+2024-09-12 10:29:37.6897|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5113
+2024-09-12 10:29:37.6916|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-09-12 10:29:37.6926|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-09-12 10:29:37.6926|INFO|Microsoft.Hosting.Lifetime|Content root path: /Users/aimefu/Desktop/作品集/yogaAdmin/yogaAdminAPI/
+2024-09-12 10:29:37.8716|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7141/ - -
+2024-09-12 10:29:38.1287|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7141/ - - - 404 0 - 258.2322ms
+2024-09-12 10:29:52.7422|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7141/Teacher/Edit application/json;+charset=utf-8 -
+2024-09-12 10:29:52.7441|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'yogaAdminAPI.Controllers.TeacherController.Edit (yogaAdminAPI)'
+2024-09-12 10:29:52.7590|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Edit", controller = "Teacher"}. Executing controller action with signature System.Threading.Tasks.Task`1[yogaAdminLib.DTOs.EditRs] Edit(yogaAdminLib.DTOs.EditRq) on controller yogaAdminAPI.Controllers.TeacherController (yogaAdminAPI).
+2024-09-12 10:29:58.3134|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (38ms) [Parameters=[@__Rq_TeacherId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT t.id, t.createtime, t.eng_name, t.isfulltime, t.mobile, t.modifytime, t.name, t.worktype
+FROM teacher AS t
+WHERE t.id = @__Rq_TeacherId_0
+LIMIT 1
+2024-09-12 10:29:59.5761|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (7ms) [Parameters=[@p7='?', @p0='?', @p1='?', @p2='?' (DbType = Boolean), @p3='?', @p4='?', @p5='?', @p6='?'], CommandType='Text', CommandTimeout='30']
+UPDATE teacher SET createtime = @p0, eng_name = @p1, isfulltime = @p2, mobile = @p3, modifytime = @p4, name = @p5, worktype = @p6
+WHERE id = @p7;
+2024-09-12 10:30:00.0784|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'yogaAdminLib.DTOs.EditRs'.
+2024-09-12 10:30:00.0851|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action yogaAdminAPI.Controllers.TeacherController.Edit (yogaAdminAPI) in 7324.3651ms
+2024-09-12 10:30:00.0855|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'yogaAdminAPI.Controllers.TeacherController.Edit (yogaAdminAPI)'
+2024-09-12 10:30:00.0944|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7141/Teacher/Edit application/json;+charset=utf-8 - - 200 - application/json;+charset=utf-8 7352.2705ms
+2024-09-12 10:30:13.4269|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7141/Teacher/Delete application/json;+charset=utf-8 -
+2024-09-12 10:30:13.4279|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'yogaAdminAPI.Controllers.TeacherController.Delete (yogaAdminAPI)'
+2024-09-12 10:30:13.4290|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Delete", controller = "Teacher"}. Executing controller action with signature System.Threading.Tasks.Task`1[yogaAdminLib.DTOs.EditRs] Delete(yogaAdminLib.DTOs.EditRq) on controller yogaAdminAPI.Controllers.TeacherController (yogaAdminAPI).
+2024-09-12 10:30:16.1523|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@__Rq_TeacherId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT t.id, t.createtime, t.eng_name, t.isfulltime, t.mobile, t.modifytime, t.name, t.worktype
+FROM teacher AS t
+WHERE t.id = @__Rq_TeacherId_0
+LIMIT 1
+2024-09-12 10:30:16.7827|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (22ms) [Parameters=[@p0='?'], CommandType='Text', CommandTimeout='30']
+DELETE FROM teacher
+WHERE id = @p0;
+2024-09-12 10:30:17.4666|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'yogaAdminLib.DTOs.EditRs'.
+2024-09-12 10:30:17.4666|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action yogaAdminAPI.Controllers.TeacherController.Delete (yogaAdminAPI) in 4038.1357ms
+2024-09-12 10:30:17.4666|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'yogaAdminAPI.Controllers.TeacherController.Delete (yogaAdminAPI)'
+2024-09-12 10:30:17.4674|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7141/Teacher/Delete application/json;+charset=utf-8 - - 200 - application/json;+charset=utf-8 4040.5218ms
+2024-09-12 10:49:17.9411|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7141
+2024-09-12 10:49:17.9581|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5113
+2024-09-12 10:49:17.9603|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-09-12 10:49:17.9614|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-09-12 10:49:17.9614|INFO|Microsoft.Hosting.Lifetime|Content root path: /Users/aimefu/Desktop/作品集/yogaAdmin/yogaAdminAPI/
+2024-09-12 10:49:18.2866|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7141/ - -
+2024-09-12 10:49:18.4804|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7141/ - - - 404 0 - 195.0457ms
+2024-09-12 10:49:49.1516|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7141
+2024-09-12 10:49:49.1703|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5113
+2024-09-12 10:49:49.1727|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-09-12 10:49:49.1739|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-09-12 10:49:49.1739|INFO|Microsoft.Hosting.Lifetime|Content root path: /Users/aimefu/Desktop/作品集/yogaAdmin/yogaAdminAPI/
+2024-09-12 10:49:49.4003|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7141/ - -
+2024-09-12 10:49:49.5955|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7141/ - - - 404 0 - 196.0695ms
+2024-09-12 10:52:32.9480|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7141
+2024-09-12 10:52:32.9687|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5113
+2024-09-12 10:52:32.9707|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-09-12 10:52:32.9716|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-09-12 10:52:32.9716|INFO|Microsoft.Hosting.Lifetime|Content root path: /Users/aimefu/Desktop/作品集/yogaAdmin/yogaAdminAPI/
+2024-09-12 10:52:33.2301|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7141/ - -
+2024-09-12 10:52:33.4332|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7141/ - - - 404 0 - 204.2352ms
+2024-09-12 10:52:44.9597|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7141/Teacher/Add multipart/form-data;+boundary="386cc9b2-b20f-4d48-9497-15bbb49837ca" 578
+2024-09-12 10:52:44.9613|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'yogaAdminAPI.Controllers.TeacherController.Add (yogaAdminAPI)'
+2024-09-12 10:52:44.9755|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Add", controller = "Teacher"}. Executing controller action with signature System.Threading.Tasks.Task`1[yogaAdminLib.DTOs.AddRs] Add(Microsoft.AspNetCore.Http.IFormFile) on controller yogaAdminAPI.Controllers.TeacherController (yogaAdminAPI).
+2024-09-12 10:52:53.7936|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (41ms) [Parameters=[@__mobile_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT t.id, t.createtime, t.eng_name, t.isfulltime, t.mobile, t.modifytime, t.name, t.worktype
+FROM teacher AS t
+WHERE t.mobile = @__mobile_0
+LIMIT 1
+2024-09-12 10:52:54.5803|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[@__mobile_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT t.id, t.createtime, t.eng_name, t.isfulltime, t.mobile, t.modifytime, t.name, t.worktype
+FROM teacher AS t
+WHERE t.mobile = @__mobile_0
+LIMIT 1
+2024-09-12 10:52:55.7954|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[@__mobile_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT t.id, t.createtime, t.eng_name, t.isfulltime, t.mobile, t.modifytime, t.name, t.worktype
+FROM teacher AS t
+WHERE t.mobile = @__mobile_0
+LIMIT 1
+2024-09-12 10:52:55.8768|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (79ms) [Parameters=[@__mobile_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT t.id, t.createtime, t.eng_name, t.isfulltime, t.mobile, t.modifytime, t.name, t.worktype
+FROM teacher AS t
+WHERE t.mobile = @__mobile_0
+LIMIT 1
+2024-09-12 10:52:55.9302|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__mobile_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT t.id, t.createtime, t.eng_name, t.isfulltime, t.mobile, t.modifytime, t.name, t.worktype
+FROM teacher AS t
+WHERE t.mobile = @__mobile_0
+LIMIT 1
+2024-09-12 10:52:59.6590|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (28ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?' (DbType = Boolean), @p4='?', @p5='?', @p6='?', @p7='?', @p8='?', @p9='?', @p10='?', @p11='?' (DbType = Boolean), @p12='?', @p13='?', @p14='?', @p15='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO teacher (id, createtime, eng_name, isfulltime, mobile, modifytime, name, worktype)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+INSERT INTO teacher (id, createtime, eng_name, isfulltime, mobile, modifytime, name, worktype)
+VALUES (@p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+2024-09-12 10:52:59.6831|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'yogaAdminLib.DTOs.AddRs'.
+2024-09-12 10:52:59.6899|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action yogaAdminAPI.Controllers.TeacherController.Add (yogaAdminAPI) in 14713.1789ms
+2024-09-12 10:52:59.6899|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'yogaAdminAPI.Controllers.TeacherController.Add (yogaAdminAPI)'
+2024-09-12 10:52:59.6981|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7141/Teacher/Add multipart/form-data;+boundary="386cc9b2-b20f-4d48-9497-15bbb49837ca" 578 - 200 - application/json;+charset=utf-8 14738.5380ms

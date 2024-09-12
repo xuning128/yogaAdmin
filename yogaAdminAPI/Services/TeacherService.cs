@@ -131,7 +131,7 @@ public class TeacherService : ITeacherService
         {
 
             string errMsg = ex.Message;
-             _logger.LogInformation($"新增教練基本資料有誤：{errMsg}");
+            _logger.LogInformation($"新增教練基本資料有誤：{errMsg}");
 
             resp.StateCode = "555";
             resp.StateCodeDesc = "新增資料有誤";
@@ -158,56 +158,62 @@ public class TeacherService : ITeacherService
         EditRs rsObj = new EditRs();
         rsObj.TeacherLt = new List<TeacherItem>();
 
-        if(Rq.Action == "E")
-                rsObj.ActionDesc = "編輯";
-            else if(Rq.Action == "D")
-                rsObj.ActionDesc = "刪除";
+        if (Rq.Action == "E")
+            rsObj.ActionDesc = "編輯";
+        else if (Rq.Action == "D")
+            rsObj.ActionDesc = "刪除";
 
         try
         {
-            Teacher req = await _yogaAdminDataContext.Teachers.Where(x=>x.id == Rq.TeacherId).FirstAsync();
-            
+            Teacher req = await _yogaAdminDataContext.Teachers.Where(x => x.id == Rq.TeacherId).FirstAsync();
+
             if (Rq.Action == "E")
             {
                 //修改
 
-                req.name = string.IsNullOrEmpty(Rq.TeacherCName)? req.name : Rq.TeacherCName;
-                req.eng_name = string.IsNullOrEmpty(Rq.TeacherEName)? req.eng_name : Rq.TeacherEName;
-                req.mobile = string.IsNullOrEmpty(Rq.Mobile)? req.mobile : Rq.Mobile;
-                req.isfulltime = Rq.IsFullTime == null? req.isfulltime : bool.Parse(Rq.IsFullTime.ToString());
-                req.worktype = string.IsNullOrEmpty(Rq.WorkTypeDesc)? req.worktype : Rq.WorkTypeDesc;
+                req.name = string.IsNullOrEmpty(Rq.TeacherCName) ? req.name : Rq.TeacherCName;
+                req.eng_name = string.IsNullOrEmpty(Rq.TeacherEName) ? req.eng_name : Rq.TeacherEName;
+                req.mobile = string.IsNullOrEmpty(Rq.Mobile) ? req.mobile : Rq.Mobile;
+                req.isfulltime = Rq.IsFullTime == null ? req.isfulltime : bool.Parse(Rq.IsFullTime.ToString());
+                req.worktype = string.IsNullOrEmpty(Rq.WorkTypeDesc) ? req.worktype : Rq.WorkTypeDesc;
                 req.modifytime = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
 
                 _yogaAdminDataContext.Update(req);
 
-                
 
-                
+
+
             }
             else if (Rq.Action == "D")
             {
                 //刪除
                 _yogaAdminDataContext.Remove(req);
-                
+
             }
 
             await _yogaAdminDataContext.SaveChangesAsync();
 
 
-            
-            
-            TeacherItem teacher = _mapper.Map<Teacher, TeacherItem >(req);
+
+
+            TeacherItem teacher = _mapper.Map<Teacher, TeacherItem>(req);
             rsObj.TeacherLt.Add(teacher);
             rsObj.Action = Rq.Action;
-            
-            
+            rsObj.StateCode = "0";
+            rsObj.StateCodeDesc = $"{rsObj.ActionDesc}教練基本資料完成";
+
+
+
 
         }
         catch (Exception ex)
         {
             string errMsg = ex.Message;
 
-           _logger.LogInformation($"{ rsObj.ActionDesc }教練基本資料有誤：{errMsg}");
+            _logger.LogInformation($"{rsObj.ActionDesc}教練基本資料有誤：{errMsg}");
+
+            rsObj.StateCode = "999";
+            rsObj.StateCodeDesc = $"{rsObj.ActionDesc}教練基本資料有誤";
 
         }
 
