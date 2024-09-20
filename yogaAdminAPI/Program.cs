@@ -27,13 +27,15 @@ Services.AddDbContext<yogaAdminDataContext>(options => options.UseNpgsql(yogaAdm
 
 
 //Services DI
-Services.AddScoped<ITeacherService, TeacherService>();
+Services.AddScoped<ITeacherService, TeacherService>(); //瑜珈老師相關CRUD
+Services.AddScoped<IYogaScheduleService, YogaScheduleService>();
 
 //auto mapper 
 
 List<Assembly> ass = new List<Assembly>();
 
-ass.Add(Assembly.GetAssembly(typeof(TeacherProfile))); //瑜珈老師相關CRUD
+ass.Add(Assembly.GetAssembly(typeof(TeacherProfile))); //瑜珈老師
+ass.Add(Assembly.GetAssembly(typeof(YogaScheduleProfile))); //課程相關
 
 Services.AddAutoMapper(ass);
 
@@ -49,7 +51,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "yogaAdmin API", Version = "v1.0.0" });
-
+    c.CustomSchemaIds(type => type.FullName); // Use fully qualified name (namespace + class name)
 });
 
 //nlog

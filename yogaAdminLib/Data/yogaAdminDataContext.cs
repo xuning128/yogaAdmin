@@ -25,14 +25,19 @@ public class yogaAdminDataContext : DbContext
                         .ToTable("teacher")
                         .HasKey(e => new { e.id });
 
-        
+         modelBuilder.Entity<YogaSchedule>()
+                        .ToTable("yogaschedule")
+                        .HasKey(e => new { e.rquid });
 
     }
 
     // Teachers info
     public DbSet<Teacher> Teachers { get; set; }
 
-   
+    //課表
+    public DbSet<YogaSchedule> YogaSchedules { get; set; }
+
+
 
 
 }

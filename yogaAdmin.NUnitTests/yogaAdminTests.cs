@@ -5,7 +5,7 @@ using yogaAdminAPI.Controllers;
 using yogaAdminAPI.Interfaces;
 using yogaAdminLib.Data;
 using Moq;
-using yogaAdminLib.DTOs;
+using yogaAdminLib.DTOs.Teacher;
 using Microsoft.EntityFrameworkCore;
 using yogaAdminLib.Entities.yogaAdmin;
 using System.Text.Json;
