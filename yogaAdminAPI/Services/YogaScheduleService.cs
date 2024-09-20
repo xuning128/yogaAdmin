@@ -46,27 +46,30 @@ public class YogaScheduleService : IYogaScheduleService
 
 
             List<YogaSchedule> req = await ContentToModel(file);
-          
+
 
             if (req.Count() > 0)
             {
-                 foreach (var item in req)
+                foreach (var item in req)
                 {
                     YogaSchedule yogaSchedule = _mapper.Map<YogaSchedule>(item);
                     await _yogaAdminDataContext.AddAsync(yogaSchedule);
 
-                    Schedule schedule = _mapper.Map<YogaSchedule,Schedule> (yogaSchedule);
+                    Schedule schedule = _mapper.Map<YogaSchedule, Schedule>(yogaSchedule);
+                    string[] names = await GetTeacherName(schedule.TeacherId);
+                    schedule.TeacherCName = names[0];
+                    schedule.TeacherEName = names[1];
                     rsObj.Schedules.Add(schedule);
                 }
 
-                //await _yogaAdminDataContext.SaveChangesAsync();
+                await _yogaAdminDataContext.SaveChangesAsync();
 
-                
+
 
 
                 rsObj.StateCode = "0";
                 rsObj.StateCodeDesc = "新增完成";
-            }   
+            }
             else
             {
                 rsObj.StateCode = "0";
@@ -126,6 +129,8 @@ public class YogaScheduleService : IYogaScheduleService
                     item.classweek = values[2]; //課程星期
                     string teachername = values[3];
                     item.teacherid = await GetTeacherId(teachername); //老師id
+                    item.period = values[4]; //課程時間
+                    item.classroom = values[5]; //教室資訊
 
                     item.issuspend = false; //預設停課 待闆娘自己打開
                     item.createtime = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
@@ -204,6 +209,34 @@ public class YogaScheduleService : IYogaScheduleService
         catch (System.Exception)
         {
 
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// 取得教練名字
+    /// </summary>
+    /// <param name="teacherid"></param>
+    /// <returns>
+    /// [0] => 中文名字 <br/>
+    /// [1] => 英文名字 
+    /// </returns>
+    private async Task<string[]> GetTeacherName(string teacherid)
+    {
+        try
+        {
+            string[] names = {"Cname", "Ename"};
+
+            var req = await _yogaAdminDataContext.Teachers.Where(x=>x.id == teacherid).FirstAsync();
+
+            names[0] = req.name;
+            names[1] = req.eng_name;
+
+            return names;
+        }
+        catch (System.Exception)
+        {
+            
             throw;
         }
     }
