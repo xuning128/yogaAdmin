@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace yogaAdminLib.DTOs;
+namespace yogaAdminLib.DTOs.Teacher;
 
 
 public class TeacherItem

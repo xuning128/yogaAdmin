@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using yogaAdminAPI.Interfaces;
 using yogaAdminLib.Data;
-using yogaAdminLib.DTOs;
+using yogaAdminLib.DTOs.Teacher;
 
 namespace yogaAdminAPI.Controllers;
 

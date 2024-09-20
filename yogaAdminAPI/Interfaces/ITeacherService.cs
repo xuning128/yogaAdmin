@@ -1,6 +1,6 @@
 
 
-using yogaAdminLib.DTOs;
+using yogaAdminLib.DTOs.Teacher;
 
 namespace yogaAdminAPI.Interfaces;
 

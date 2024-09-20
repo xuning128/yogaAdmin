@@ -5,7 +5,7 @@ using System.Text;
 using System.Web;
 using Microsoft.EntityFrameworkCore;
 using yogaAdminLib.Data;
-using yogaAdminLib.DTOs;
+using yogaAdminLib.DTOs.Teacher;
 using yogaAdminAPI.Interfaces;
 using yogaAdminLib.Entities.yogaAdmin;
 using AutoMapper;

@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Net.NetworkInformation;
-using yogaAdminLib.DTOs;
+using yogaAdminLib.DTOs.Teacher;
 
-namespace yogaAdminLib.DTOs;
+namespace yogaAdminLib.DTOs.Teacher;
 
 /// <summary>
 /// 瑜珈老師查詢 Request 
